@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico:regular);
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Lobster&family=Pacifico&display=swap');
+
+
+.outer{
+    display: block;
+    background-color: beige;
+    height: 780px;
+    background-size: cover;
+    padding: 20px;
+}
+#logincomp h2{
+    font-family: 'Pacifico';
+    margin-bottom: 80px;
+}
+.row{
+    height: 100%;
+}
+.label{
+    text-align: left;
+}
+.container-box{
+    border: 2px solid red;
+    height: 500px;
+    width: 1000px;
+    margin-top: 100px;
+    box-shadow: 2px 3px orangered;
+}
+.col-6{
+    text-align: center;
+
+}
+#logincomp{
+    padding: 0px 20px;
+}
+#image img{
+    height: 100%;
+    width: 100%;
+}
+.label{
+    font-family: 'Pacifico','cursive';
+}
+.forminput{
+    margin: 10px 5px;
+    padding: 6px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.inputcheck{
+    font-family: 'Pacifico','cursive';
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+}
+.inputcheck a{
+    margin-left: 198px;
+}
+.inputcheck input{
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+#myform{
+    display: flex;
+    flex-direction: column;
+}
+#image{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
+.btn_login{
+    background-color: #d34038;
+    color: white;
+    font-family: 'Lobster', cursive;
+    margin-top: 20px;
+}
+.btn_login:hover{
+    background-color: #dc362d;
+    color: white;
+    font-family: 'Lobster', cursive;
+}
+.bottom{
+    font-family: lobster;
+    margin-top: 10px;
+}

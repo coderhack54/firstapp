@@ -1,0 +1,23 @@
+tho find and replace shortcut ---->   ctrl+h
+
+
+to update the dom usestate function is used 
+
+
+
+In mui materrial
+
+grid container is used for grid calssname row
+grid item is used for grid calssname column
+
+
+to run the react file command---->
+            npm start
+
+
+
+
+
+
+            
+

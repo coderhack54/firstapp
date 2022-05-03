@@ -1,0 +1,65 @@
+#content-box{
+    height:750px;
+    display:flex;
+    position:relative;
+    /* background: url("https://i.pinimg.com/736x/f6/b2/af/f6b2afe8f956c9f417f5d4556ca2a984--blue-wallpapers-light-blue.jpg")  no-repeat; */
+    
+    /* background-position: center;
+    background-size: cover; */
+    background-color: brown;
+}
+.signupbox{
+    height: 80%;
+    width:80%;
+    margin-top:80px;
+    display: flex;
+    flex-direction: row;
+}
+.Company_logo{
+    width: 100px;
+    border-radius: 100%;
+}
+#heading{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top:50px;
+}
+.namebox{
+    display: flex;
+
+
+}
+.card{
+    margin-top:20px;
+    
+    
+}
+.left{
+    height: 100%;
+    width: 45%;
+}
+.left img{
+    height: 100%;
+    width: 100%;
+}
+.right{
+    height: 100%;
+    width: 55%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    justify-content: flex-start;
+}
+.right{
+    text-align: center;
+}
+.btn-signup{
+    background-color: blue;
+    color: white;
+    margin-top: 25px;
+}
+.btn-signup:hover{
+    background-color: blueviolet;
+    color: white;
+}
+

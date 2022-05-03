@@ -1,0 +1,6 @@
+socket is used to build chatting applications
+
+
+backend command to install socket => npm i socket.io
+
+frontendd command => npm i socket.io-client

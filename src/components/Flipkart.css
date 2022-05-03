@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.proimg{
+    height: 70px;
+    width: 70px;
+}
+.centerImg{
+    height:350px;
+    width:80%;
+}
