@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   Container,
   TextField,
@@ -11,6 +11,7 @@ import {
   Button
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../UserContext";
 
 const ProductList = () => {
 
@@ -24,6 +25,8 @@ const ProductList = () => {
   const prod3 = "https://cms.qz.com/wp-content/uploads/2017/11/pubg-poster.jpg?quality=75&strip=all&w=1200&h=900&crop=1";
   const prod4 =
     "https://i2.wp.com/blog.indiegala.com/wp-content/uploads/2020/04/tekken-7-article-poster-e1587261346211.jpg?fit=1104%2C700&ssl=1";
+
+    const {addToCart} = useContext(UserContext)
   return (
     <Paper sx={{height:"100vh"}}>
       <header className="bg-light">
@@ -61,7 +64,7 @@ const ProductList = () => {
                     >
                       $22.54/-
                     </Typography>
-                    <Button onClick={() => navigate("/gallery")}>Go to gallery</Button>
+                    <Button color="success" variant="contained" onClick={(e) => addToCart("call of duty")}>Add to Cart</Button>
                   </CardContent>
                 </Card>
               </Grid>
@@ -80,6 +83,7 @@ const ProductList = () => {
                     >
                       $9.99/-
                     </Typography>
+                    <Button color="success" variant="contained" onClick={(e) => addToCart("NFS most wanted")}>Add to Cart</Button>
                   </CardContent>
                 </Card>
               </Grid>
@@ -98,6 +102,7 @@ const ProductList = () => {
                     >
                       $31.99/-
                     </Typography>
+                    <Button color="success" variant="contained" onClick={(e) => addToCart("pubg")}>Add to Cart</Button>
                   </CardContent>
                 </Card>
               </Grid>
@@ -116,6 +121,7 @@ const ProductList = () => {
                     >
                       $19.04/-
                     </Typography>
+                    <Button color="success" variant="contained" onClick={(e) => addToCart("tekken 3")}>Add to Cart</Button>
 
                   </CardContent>
                 </Card>

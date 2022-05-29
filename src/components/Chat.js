@@ -8,7 +8,7 @@ const Chat = () => {
 
   //initializing socket
   const [socket, setSocket] = useState(io(url, { autoConnect: false }));
-  const [text, setText] = useState("")
+  const [text, setText] = useState("");
 
   const [messageArray, setMessageArray] = useState([
     // { text: "aaj kon sa exam hai?", sent: false },
@@ -22,22 +22,25 @@ const Chat = () => {
 
   const displayMessage = () => {
     return messageArray.map((message) => (
-        <div className={message.sent? "msg-sent message":"msg-rec message"} >
+      <div className={message.sent ? "msg-sent message" : "msg-rec message"}>
         <p className="msg-text">{message.text}</p>
-        </div>
-    )
-    )};
+      </div>
+    ));
+  };
 
-    const sendMessage = () => {
-        const obj ={text: text , sent:true}
-        socket.emit('sendmsg',obj);
-        setMessageArray([...messageArray,obj]);
-    }
-    //  for recieveing message from server
-    socket.on('recmsg', (data)=>{
-        console.log(data);
-        setMessageArray([...messageArray,data]);
-    })
+  const sendMessage = (e) => {
+    e.preventDefault();
+    const obj = { text: text, sent: true };
+    socket.emit("sendmsg", obj);
+    setMessageArray([...messageArray, obj]);
+    setText("");
+  };
+
+  //  for recieveing message from server
+  socket.on("recmsg", (data) => {
+    console.log(data);
+    setMessageArray([...messageArray, data]);
+  });
 
   return (
     <div>
@@ -45,11 +48,21 @@ const Chat = () => {
         <Card>
           <CardContent className="chat-area">{displayMessage()}</CardContent>
           <CardActions>
-            <div className="input-group">
-              <input className="form-control" onChange={(e) => setText(e.target.value)}
-              value={text}/>
-              <button className="btn btn-success" onClick={sendMessage}>Send Message</button>
+            <form onSubmit={sendMessage}>
+
+            <div className="input-group w-100">
+              <input
+                className="form-control"
+                onChange={(e) => setText(e.target.value)}
+                value={text}
+              />
+              <button
+                className="btn btn-success"
+              >
+                Send Message
+              </button>
             </div>
+            </form>
           </CardActions>
         </Card>
       </h1>

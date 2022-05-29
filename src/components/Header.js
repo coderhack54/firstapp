@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink,useNavigate} from 'react-router-dom'
 import img from './logo.png'
-import { Switch } from "@mui/material";
+import { Badge, Switch } from "@mui/material";
+import { ShoppingCart } from '@mui/icons-material';
+import { UserContext } from '../UserContext';
 
 
 export default function Header({darkTheme,setDarkTheme}) {     //accepting the props
@@ -15,12 +17,16 @@ export default function Header({darkTheme,setDarkTheme}) {     //accepting the p
     navigate(path);
   }
 
+  
+
+  const {cart} = useContext(UserContext);
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
     <NavLink className="navbar-brand" to="/signup">
-      <img src={img} alt="" className='Company_logo' />
+      <img src={img} alt="" className='Company_logo' style={{width:"71px"}}/>
     </NavLink>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -56,6 +62,11 @@ export default function Header({darkTheme,setDarkTheme}) {     //accepting the p
             }
           }/>
         </li>
+        <li className="nav-item">
+          <Badge badgeContent={cart.length} color="primary" sx={ {mr:3} }>
+            <ShoppingCart onClick={()=>navigate("cart")}/>
+          </Badge>
+        </li> 
       </ul>
       <form className="d-flex">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

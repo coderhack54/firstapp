@@ -1,6 +1,7 @@
 .chat-area{
     height: 70vh;
     overflow: scroll;
+    background: url("./chatbg.jpg") no-repeat center/cover;
 }
 
 .message{
